@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    tools:context="com.msapps.robotcontrolhub.MainActivity">
+
+    <ToggleButton
+        android:id="@+id/enable_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textOff="DISABLE ROBOT"
+        android:textOn="ENABLE ROBOT"/>
+
+    <TextView
+        android:id="@+id/robot_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/enable_button"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/controller_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enable_button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:text="Controller Connected:" />
+
+    <TextView
+        android:id="@+id/controller_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/controller_status_label"
+        android:layout_marginLeft="10dp" />
+
+    <ToggleButton
+        android:id="@+id/controller_data_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/controller_status"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:textOff="HIDE CONTROLLER DATA"
+        android:textOn="SHOW CONTROLLER DATA"/>
+
+    <TextView
+        android:id="@+id/joystick_left_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/controller_data_button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/joystick_left_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/joystick_left_x"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/joystick_right_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/joystick_left_y"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/joystick_right_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/joystick_right_x"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/joystick_right_y"
+        android:id="@+id/dpad_key_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/robot_info_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Information from Robot"/>
+    <TextView
+        android:id="@+id/robot_info"
+        android:layout_below="@id/robot_info_label"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
